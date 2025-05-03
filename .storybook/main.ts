@@ -9,11 +9,16 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@chromatic-com/storybook",
-    "@storybook/experimental-addon-test"
+    "@storybook/experimental-addon-test",
+    "@storybook/addon-links",
+    "@storybook/addon-interactions",
   ],
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
-  }
+  },
+  docs: {
+    autodocs: "tag",
+  },
 };
 export default config;
