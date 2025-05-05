@@ -1,22 +1,23 @@
-import colors from './colors'; // Correct import for colors
-import { createTheme } from '@mui/material/styles';
-import { typography } from './typography'; // Uncommented import
-import { spacing } from './spacing'; // Uncommented import
-
+import { createTheme } from '@mui/material'
+import colors from './colors' // Correct import for colors
+import { typography } from './typography' // Uncommented import
+import { spacing } from './spacing' // Uncommented import
+import { colorData } from './colorToken'
 // 共通デザイントークン
 export const tokens = {
-  colors,
-  typography,
-  spacing,
-};
+    colors,
+    typography,
+    spacing,
+}
 
-// MUI 7のテーマ
 export const muiTheme = createTheme({
     palette: {
         primary: {
-            main: tokens.colors.primary[500],
-            light: tokens.colors.primary[300],
-            dark: tokens.colors.primary[700],
+            main: colorData.primary.main,
+            light: colorData.primary.light,
+            dark: colorData.primary.dark,
+            // lighter: colorData.primary.lighter,
+            // textContrast: colorData.primary.textContrast,
         },
         secondary: {
             main: tokens.colors.neutral[500],
@@ -65,4 +66,4 @@ export const muiTheme = createTheme({
     },
 })
 
-export default tokens;
+export default tokens
